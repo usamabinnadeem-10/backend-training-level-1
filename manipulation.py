@@ -14,6 +14,11 @@ with open('./birthdays.json', 'r') as f:
 
 birthdays = data['birthdays']
 
+def filter_even():
+    a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    print('\nOriginal list ==> ', a)
+    print('Even list ==> ', list(filter(lambda val: val % 2 == 0, a)))
+
 def group_birthdays():
     month_names = data['month_names']
     grouped = list(Counter([month_names[person['birthday']['month']] for person in birthdays]).items())
@@ -57,5 +62,6 @@ def main():
             quit = True
 
 if __name__ == '__main__':
+    filter_even()
     group_birthdays()
     main()
