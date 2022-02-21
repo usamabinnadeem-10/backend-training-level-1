@@ -27,9 +27,9 @@
         {
             "name": "Albus Dumbledore",
             "birthday": {
-                "day": "20",
-                "month": "10",
-                "year": "1960"
+                "day": "01",
+                "month": "02",
+                "year": "1980"
             }
         },
         {
@@ -37,16 +37,30 @@
             "birthday": {
                 "day": "05",
                 "month": "02",
-                "year": "1977"
+                "year": "1980"
             }
         },
         {
             "name": "Shahid Afridi",
             "birthday": {
-                "day": "01",
+                "day": "02",
                 "month": "01",
                 "year": "1980"
             }
         }
-    ]
+    ],
+    "month_names": {
+        "01": "January",
+        "02": "February",
+        "03": "March",
+        "04": "April",
+        "05": "May",
+        "06": "June",
+        "07": "July",
+        "08": "August",
+        "09": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
+    }
 }

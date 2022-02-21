@@ -1,4 +1,5 @@
 import json
+from collections import Counter
 
 def ask_choice():
     return input('\n>>> Press 1 if you want to look up a birthday\n>>> Press 2 if you want to add a birthday\n>>> Enter any other key to quit\n')
@@ -12,6 +13,12 @@ with open('./birthdays.json', 'r') as f:
   data = json.load(f)
 
 birthdays = data['birthdays']
+
+def group_birthdays():
+    month_names = data['month_names']
+    grouped = list(Counter([month_names[person['birthday']['month']] for person in birthdays]).items())
+    print('\n>>> Number of people having birthdays in the same months')
+    print(grouped,'\n')
 
 def main():
     show_birthdays(birthdays)
@@ -50,4 +57,5 @@ def main():
             quit = True
 
 if __name__ == '__main__':
+    group_birthdays()
     main()
