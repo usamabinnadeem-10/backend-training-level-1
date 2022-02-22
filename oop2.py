@@ -1,8 +1,3 @@
-from abc import (
-  ABC,
-  abstractmethod,
-)
-
 import uuid
 
 class Item():
@@ -12,33 +7,25 @@ class Item():
         self.value = value
 
 
-class Box(ABC):
+class Box():
 
-    @abstractmethod
     def add(self, Item):
-        ...
+        pass
 
-    @abstractmethod
     def add_many(self, Items):
-        ...
+        pass
     
-    @abstractmethod
     def count(self):
-        ...
+        pass
 
-    @abstractmethod
     def empty(self):
-        ...
+        pass
 
-    @abstractmethod
     def get_items_as_array(self):
-        ...
+        pass
 
-    @abstractmethod
     def print_items(self):
-        ...
-
-    
+        pass
 
 
 class ListBox(Box):
